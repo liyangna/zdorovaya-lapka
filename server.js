@@ -1,6 +1,3 @@
-// 加载环境变量（如果存在 .env 文件）
-require('dotenv').config();
-
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 
@@ -9,13 +6,11 @@ app.use(express.json());
 app.use(express.static('.'));
 
 // ============================================================
-// 重要：从环境变量读取配置，如果没有则使用硬编码的测试值
-// 注意：测试密钥仅用于作业演示，生产环境请务必使用环境变量！
+// 从环境变量读取配置，如果没有则使用硬编码的测试值
 // ============================================================
 const SHOP_ID = process.env.SHOP_ID || '1367464';
 const SECRET_KEY = process.env.SECRET_KEY || 'test_EN-raAsqyqfDne6g3pGfkqahT_q_J9ebQ0RBhgIhz9k';
 
-// 打印配置信息（密钥只显示前几位，用于调试）
 console.log('========================================');
 console.log('ЮKassa Payment Server Starting...');
 console.log('SHOP_ID:', SHOP_ID);
@@ -48,16 +43,15 @@ app.post('/api/create-payment', async (req, res) => {
         
         const data = await response.json();
         
-        // 检查 ЮKassa 是否返回错误
         if (!response.ok) {
-            console.error('❌ ЮKassa 错误:', data);
+            console.error('❌ ЮKassa ошибка:', data);
             return res.status(response.status).json({ 
                 success: false, 
-                error: data.description || '支付网关错误' 
+                error: data.description || 'Ошибка платежного шлюза' 
             });
         }
         
-        console.log(`✅ 支付创建成功! ID: ${data.id}`);
+        console.log(`✅ Платеж создан! ID: ${data.id}`);
         res.json({ 
             success: true, 
             confirmation_token: data.confirmation.confirmation_token, 
@@ -65,12 +59,12 @@ app.post('/api/create-payment', async (req, res) => {
         });
         
     } catch (error) {
-        console.error('❌ 服务器错误:', error.message);
+        console.error('❌ Ошибка:', error.message);
         res.status(500).json({ success: false, error: error.message });
     }
 });
 
-// 健康检查接口（用于 Render 验证服务是否正常运行）
+// 健康检查
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
