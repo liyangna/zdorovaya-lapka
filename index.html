@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровая Лапка | Ветеринарная клиника в Москве</title>
+    
+    <!-- SEO Meta теги -->
+    <meta name="description" content="Ветеринарная клиника «Здоровая Лапка» в Москве. Диагностика, хирургия, лаборатория, вакцинация. Онлайн оплата услуг. Запись по телефону +7 499 342-12-56">
+    <meta name="keywords" content="ветеринарная клиника, лечение животных, ветеринар Москва, кастрация кошек, прививки для собак, УЗИ для животных, оплата онлайн">
+    <meta name="author" content="Здоровая Лапка">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph теги (для соцсетей) -->
+    <meta property="og:title" content="Ветеринарная клиника «Здоровая Лапка»">
+    <meta property="og:description" content="Профессиональная ветеринарная помощь в Москве. Диагностика, лечение, хирургия, вакцинация. Онлайн оплата.">
+    <meta property="og:image" content="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg">
+    <meta property="og:url" content="https://zdorovaya-lapka.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vet-blue': '#1E40AF',
+                        'vet-light': '#DBEAFE',
+                        'vet-dark': '#1E3A8A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-blue-50">
+
+    <!-- 导航栏 -->
+    <nav class="bg-blue-800 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-paw text-2xl"></i>
+                <span class="font-bold text-xl">Здоровая Лапка</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-200 transition">Главная</a>
+                <a href="#about" class="hover:text-blue-200 transition">О клинике</a>
+                <a href="#services" class="hover:text-blue-200 transition">Услуги</a>
+                <a href="#contact" class="hover:text-blue-200 transition">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域（带图片） -->
+    <header id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Ветеринарная клиника <br>«Здоровая Лапка»</h1>
+                <p class="text-xl mb-8 text-blue-100">Забота о ваших питомцах — наша профессия</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg text-center">
+                        Записаться на приём
+                    </a>
+                    <!-- 支付按钮 - 跳转到支付页面 -->
+                    <a href="payment.html?amount=1700&service=Рентген%20в%201%20проекции" 
+                       class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fas fa-credit-card"></i> Оплатить онлайн
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img src="img/01.png" 
+                     alt="Счастливая собака" 
+                     class="rounded-lg shadow-xl mx-auto">
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于诊所 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">О нашей клинике</h2>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <img src="img/02.png" 
+                         alt="Ветеринар и питомец" 
+                         class="rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 space-y-4 text-gray-700">
+                    <p>«Здоровая Лапка» — это современная ветеринарная клиника полного цикла в Москве. Мы лечим кошек, собак, грызунов и птиц.</p>
+                    <p>Наша команда — это опытные врачи, которые любят свою работу. Мы используем только качественное оборудование и препараты.</p>
+                    <div class="flex items-center space-x-2 text-blue-600">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Москва, проспект Маршала Жукова, 35</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-blue-600">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+7 499 342-12-56</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-blue-600">
+                        <i class="fas fa-envelope"></i>
+                        <span>clients@zdorovaya-lapka.ru</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务列表 -->
+    <section id="services" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-4">Наши услуги</h2>
+            <p class="text-center text-gray-600 mb-12">Полный спектр ветеринарной помощи</p>
+            
+            <!-- 诊断和X光 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <i class="fas fa-x-ray mr-3"></i> Диагностика и рентген
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Рентген в 1 проекции</span>
+                        <span class="font-bold text-blue-600">1700 ₽</span>
+                        <a href="payment.html?amount=1700&service=Рентген%20в%201%20проекции" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Рентген в 2 проекциях</span>
+                        <span class="font-bold text-blue-600">2950 ₽</span>
+                        <a href="payment.html?amount=2950&service=Рентген%20в%202%20проекциях" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Рентген в 3 проекциях</span>
+                        <span class="font-bold text-blue-600">4200 ₽</span>
+                        <a href="payment.html?amount=4200&service=Рентген%20в%203%20проекциях" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>УЗИ брюшной полости</span>
+                        <span class="font-bold text-blue-600">4500 ₽</span>
+                        <a href="payment.html?amount=4500&service=УЗИ%20брюшной%20полости" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>ЭХО-кардиограмма</span>
+                        <span class="font-bold text-blue-600">3850 ₽</span>
+                        <a href="payment.html?amount=3850&service=ЭХО-кардиограмма" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>ЭКГ</span>
+                        <span class="font-bold text-blue-600">1550 ₽</span>
+                        <a href="payment.html?amount=1550&service=ЭКГ" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 外科 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <i class="fas fa-syringe mr-3"></i> Хирургия
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Стерилизация кошки</span>
+                        <span class="font-bold text-blue-600">3500 ₽</span>
+                        <a href="payment.html?amount=3500&service=Стерилизация%20кошки" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Кастрация кота</span>
+                        <span class="font-bold text-blue-600">1950 ₽</span>
+                        <a href="payment.html?amount=1950&service=Кастрация%20кота" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Остеосинтез</span>
+                        <span class="font-bold text-blue-600">от 21000 ₽</span>
+                        <a href="payment.html?amount=21000&service=Остеосинтез" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Удаление новообразований</span>
+                        <span class="font-bold text-blue-600">от 1850 ₽</span>
+                        <a href="payment.html?amount=1850&service=Удаление%20новообразований" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 治疗和预防 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <i class="fas fa-heartbeat mr-3"></i> Терапия и вакцинация
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Приём терапевта</span>
+                        <span class="font-bold text-blue-600">3150 ₽</span>
+                        <a href="payment.html?amount=3150&service=Приём%20терапевта" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Вакцинация импортной вакциной</span>
+                        <span class="font-bold text-blue-600">4500 ₽</span>
+                        <a href="payment.html?amount=4500&service=Вакцинация" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-blue-500 flex justify-between items-center">
+                        <span>Чипирование</span>
+                        <span class="font-bold text-blue-600">2450 ₽</span>
+                        <a href="payment.html?amount=2450&service=Чипирование" class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm hover:bg-green-200 transition">Оплатить</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-sm text-gray-500 mt-6 text-center">* Нажмите «Оплатить» для онлайн оплаты выбранной услуги</p>
+        </div>
+    </section>
+
+    <!-- 联系方式和社交媒体 -->
+    <section id="contact" class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Свяжитесь с нами</h2>
+            <div class="flex flex-wrap justify-center gap-8 mb-8">
+                <div class="bg-blue-700 rounded-lg p-6 w-64">
+                    <i class="fas fa-phone-alt text-3xl mb-3"></i>
+                    <p class="font-semibold">Телефон</p>
+                    <p>+7 499 342-12-56</p>
+                </div>
+                <div class="bg-blue-700 rounded-lg p-6 w-64">
+                    <i class="fas fa-envelope text-3xl mb-3"></i>
+                    <p class="font-semibold">Email</p>
+                    <p>clients@zdorovaya-lapka.ru</p>
+                </div>
+                <div class="bg-blue-700 rounded-lg p-6 w-64">
+                    <i class="fas fa-map-marker-alt text-3xl mb-3"></i>
+                    <p class="font-semibold">Адрес</p>
+                    <p>Москва, пр-т Маршала Жукова, 35</p>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://vk.com/zdoravaya_lapka" target="_blank" class="bg-white text-blue-800 w-12 h-12 rounded-full flex items-center justify-center text-xl hover:bg-gray-200 transition">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/+WqKcasdRe-VQyYasasd" target="_blank" class="bg-white text-blue-800 w-12 h-12 rounded-full flex items-center justify-center text-xl hover:bg-gray-200 transition">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-blue-900 text-white py-6 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Ветеринарная клиника «Здоровая Лапка». Все права защищены.</p>
+            <p class="text-sm text-blue-300 mt-2">Забота о здоровье вашего питомца — наша главная цель</p>
+        </div>
+    </footer>
+
+    <!-- Yandex.Metrika -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(XXXXXXXX, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>
