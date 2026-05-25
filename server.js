@@ -1,3 +1,11 @@
+// 在文件最开头添加
+require('dotenv').config();
+
+const SHOP_ID = process.env.SHOP_ID;
+const SECRET_KEY = process.env.SECRET_KEY;
+
+console.log('SHOP_ID:', SHOP_ID);
+
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 
